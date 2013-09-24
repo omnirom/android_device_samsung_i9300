@@ -1,0 +1,2 @@
+add_lunch_combo full_i9300-userdebug
+add_lunch_combo custom_i9300-userdebug
