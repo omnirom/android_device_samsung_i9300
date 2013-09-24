@@ -14,14 +14,17 @@
 # limitations under the License.
 
 # Inherit from the common Open Source product configuration
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
+# Inherit from our omni product configuration
+$(call inherit-product, vendor/omni/config/common.mk)
 
 # This is where we'd set a backup provider if we had one
 #$(call inherit-product, device/sample/products/backup_overlay.mk)
 $(call inherit-product, device/samsung/i9300/device.mk)
 
 # Discard inherited values and use our own instead.
-PRODUCT_NAME := full_i9300
+PRODUCT_NAME := omni_i9300
 PRODUCT_DEVICE := i9300
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := Samsung
