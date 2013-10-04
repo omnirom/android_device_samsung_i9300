@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3a045101_e8c4d160",
+        "filename": "full_i9300.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2013-10-04T19:52:04Z",
+      "side": 1,
+      "message": "We should preserve copyright here - add OmniROM but don\u0027t delete CM",
+      "revId": "d261dc3a65e9a69a20e2920f4753409bf2912f74",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    }
+  ]
+}
