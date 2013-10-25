@@ -1,0 +1,20 @@
+[
+  {
+    "remote": "omnirom",
+    "repository": "android_kernel_samsung_smdk4412",
+    "target_path": "kernel/samsung/smdk4412",
+    "revision": "android-4.3"
+  },
+  {
+    "remote": "omnirom",
+    "repository": "android_hardware_samsung",
+    "target_path": "hardware/samsung",
+    "revision": "android-4.3"
+  },
+  {
+    "remote": "omnirom",
+    "repository": "android_device_samsung_smdk4412-common",
+    "target_path": "device/samsung/smdk4412-common",
+    "revision": "android-4.3"
+  }
+]
