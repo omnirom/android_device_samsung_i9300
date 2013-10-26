@@ -16,6 +16,6 @@
 -->
 
 <resources xmlns:xliff="urnasis:names:tc:xliff:document:1.2 ">
-    <!-- Volume Rocker Wake -->
-    <bool name="config_show_volumeRockerWake">true</bool>
+    <!-- Button settings enabled or disabled -->
+    <bool name="config_device_has_button_settings" translatable="false">true</bool>
 </resources>
