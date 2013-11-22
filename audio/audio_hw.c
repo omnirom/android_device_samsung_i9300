@@ -314,7 +314,7 @@ void select_devices(struct m0_audio_device *adev)
     int i;
 
     if (adev->active_out_device == adev->out_device && adev->active_in_device == adev->in_device)
-    return;
+        return;
 
     ALOGV("Changing output device %x => %x\n", adev->active_out_device, adev->out_device);
     ALOGV("Changing input device %x => %x\n", adev->active_in_device, adev->in_device);
@@ -3020,10 +3020,6 @@ static int adev_open(const hw_module_t* module, const char* name,
 
     /* Set the default route before the PCM stream is opened */
     pthread_mutex_lock(&adev->lock);
-    adev->mode = AUDIO_MODE_NORMAL;
-    adev->out_device = AUDIO_DEVICE_OUT_SPEAKER;
-    adev->in_device = AUDIO_DEVICE_IN_BUILTIN_MIC & ~AUDIO_DEVICE_BIT_IN;
-    select_devices(adev);
 
     /* +30db boost for mics */
     adev->mixer_ctls.mixinl_in1l_volume = mixer_get_ctl_by_name(adev->mixer, "MIXINL IN1L Volume");
@@ -3031,6 +3027,11 @@ static int adev_open(const hw_module_t* module, const char* name,
 
     /* Disable voicecall route */
     set_voicecall_route_by_array(adev->mixer, voicecall_default_disable, 1);
+
+    adev->mode = AUDIO_MODE_NORMAL;
+    adev->out_device = AUDIO_DEVICE_OUT_SPEAKER;
+    adev->in_device = AUDIO_DEVICE_IN_BUILTIN_MIC & ~AUDIO_DEVICE_BIT_IN;
+    select_devices(adev);
 
     adev->pcm_modem_dl = NULL;
     adev->pcm_modem_ul = NULL;
