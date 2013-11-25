@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8b8ed5af_a189f823",
+        "filename": "overlay/frameworks/base/core/res/res/values/config.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1000154
+      },
+      "writtenOn": "2013-11-25T21:51:54Z",
+      "side": 1,
+      "message": "Typo error. It should be resources.",
+      "revId": "4b3ecd51c1920b0ad06804b4e86c60cfeccace4a",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    }
+  ]
+}
