@@ -18,124 +18,13 @@
 -->
 
 <!-- These resources are around just to allow their values to be customized
-     for different hardware and product builds. -->
+        for different hardware and product builds. -->
 <resources>
-
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
          autodetected from the Configuration. -->
     <bool name="config_showNavigationBar">false</bool>
-
-    <!-- Array of light sensor LUX values to define our levels for auto backlight brightness support.
-        The N entries of this array define N + 1 zones as follows:
-
-        Zone 0: 0 <= LUX < array[0]
-        Zone 1: array[0] <= LUX < array[1]
-        ...
-        Zone N: array[N - 1] <= LUX < array[N]
-        Zone N + 1: array[N] <= LUX < infinity
-
-        Must be overridden in platform specific overlays
-    -->
-    <integer-array name="config_autoBrightnessLevels">
-        <item>150</item>
-        <item>300</item>
-        <item>600</item>
-        <item>1000</item>
-        <item>3000</item>
-        <item>8000</item>
-        <item>15000</item>
-        <item>28000</item>
-        <item>41000</item>
-        <item>54000</item>
-        <item>67000</item>
-        <item>80000</item>
-        <item>100000</item>
-        <item>150000</item>
-        <item>200000</item>
-    </integer-array>
-
-    <!-- Array of output values for LCD backlight corresponding to the LUX values
-        in the config_autoBrightnessLevels array. This array should have size one greater
-        than the size of the config_autoBrightnessLevels array.
-    -->
-    <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>20</item>
-        <item>30</item>
-        <item>40</item>
-        <item>50</item>
-        <item>60</item>
-        <item>70</item>
-        <item>80</item>
-        <item>100</item>
-        <item>120</item>
-        <item>140</item>
-        <item>160</item>
-        <item>180</item>
-        <item>200</item>
-        <item>220</item>
-        <item>240</item>
-        <item>255</item>
-    </integer-array>
-
-    <!-- Array of output values for button backlight corresponding to the LUX values
-        in the config_autoBrightnessLevels array. This array should have size one greater
-        than the size of the config_autoBrightnessLevels array.
-    -->
-    <integer-array name="config_autoBrightnessButtonBacklightValues">
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-    </integer-array>
-
-    <!-- Array of output values for keyboard backlight corresponding to the LUX values
-        in the config_autoBrightnessLevels array. This array should have size one greater
-        than the size of the config_autoBrightnessLevels array.
-        i9300 has no keyboard so all values are zero.
-    -->
-    <integer-array name="config_autoBrightnessKeyboardBacklightValues">
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-    </integer-array>
-
-    <!-- An Array of "[Connection name],[ConnectivityManager.TYPE_xxxx],
-         [associated radio-type],[priority],[restoral-timer(ms)],[dependencyMet]  -->
+ 
+    <!-- An Array of "[Connection name],[ConnectivityManager.TYPE_xxxx],      [associated radio-type],[priority],[restoral-timer(ms)],[dependencyMet]  -->
     <!-- the 5th element "resore-time" indicates the number of milliseconds to delay
          before automatically restore the default connection.  Set -1 if the connection
          does not require auto-restore. -->
@@ -179,32 +68,8 @@
     <!-- The default iface on which to monitor data use -->
     <string name="config_datause_iface">pdp0</string>
 
-    <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
-    <bool name="config_intrusiveNotificationLed">true</bool>
-
-    <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
-    <!-- <bool name="config_intrusiveBatteryLed">true</bool> -->
-
-    <!-- Does the battery LED support multiple colors? Used to decide if the user can change the colors -->
-    <!-- <bool name="config_multiColorBatteryLed">true</bool> -->
-
-    <!-- Default color for notification LED is white. -->
-    <color name="config_defaultNotificationColor">#ffffffff</color>
-
-    <!-- Default LED on time for notification LED in milliseconds. -->
-    <integer name="config_defaultNotificationLedOn">1000</integer>
-
-    <!-- Default LED off time for notification LED in milliseconds. -->
-    <integer name="config_defaultNotificationLedOff">9000</integer>
-
     <!-- Allow the menu hard key to be disabled in LockScreen on some devices -->
     <bool name="config_disableMenuKeyInLockScreen">true</bool>
-
-    <!-- Disable the home key unlock setting -->
-    <!-- <bool name="config_disableHomeUnlockSetting">false</bool> -->
-
-    <!-- Workaround for devices with broken keyboards -->
-    <!-- <bool name="config_forceDisableHardwareKeyboard">true</bool> -->
 
     <!-- Hardware 'face' keys present on the device, stored as a bit field.
          This integer should equal the sum of the corresponding value for each
@@ -216,9 +81,21 @@
             16 - App switch
          For example, a device with Home, Back and Menu keys would set this
          config to 7. -->
-    <!-- <integer name="config_deviceHardwareKeys">7</integer> -->
+    <integer name="config_deviceHardwareKeys">7</integer>
 
-    <!-- Boolean to enable stk functionality on Samsung phones -->
-    <!-- <bool name="config_samsung_stk">true</bool> -->
+    <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
+    <bool name="config_intrusiveNotificationLed">true</bool>
+
+    <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
+    <bool name="config_intrusiveNotificationLed">true</bool>
+
+    <!-- Default color for notification LED is white. -->
+    <color name="config_defaultNotificationColor">#ffffffff</color>
+
+    <!-- Default LED on time for notification LED in milliseconds. -->
+    <integer name="config_defaultNotificationLedOn">1000</integer>
+
+    <!-- Default LED off time for notification LED in milliseconds. -->
+    <integer name="config_defaultNotificationLedOff">9000</integer>
 
 </resources>
