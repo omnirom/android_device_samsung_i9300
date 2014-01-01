@@ -88,6 +88,12 @@
 
     <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
     <bool name="config_intrusiveNotificationLed">true</bool>
+    
+    <!-- Is the notification LED intrusive? -->
+    <bool name="config_intrusiveBatteryLed">true</bool>
+    
+    <!-- Is the LED multicolor? -->
+    <bool name="config_multiColorBatteryLed">true</bool>
 
     <!-- Default color for notification LED is white. -->
     <color name="config_defaultNotificationColor">#ffffffff</color>

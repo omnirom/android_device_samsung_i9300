@@ -20,4 +20,7 @@
     <!-- Volume Rocker Wake Support. Some devices do not support (PMU) this.
          Setting to false will disable Volume Rocker Wake support -->
     <bool name="config_show_volumeRockerWake">true</bool>
+    
+    <!-- Does the LED support RGB multicolor? -->
+    <bool name="config_has_multi_color_led" translatable="false">true</bool>
 </resources>
