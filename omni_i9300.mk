@@ -32,3 +32,16 @@ PRODUCT_DEVICE := i9300
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := Samsung
 PRODUCT_MODEL := GT-I9300
+
+# Override common i9300 properties to show properly i.e. in google services
+# This is required to solve some apps being incompatible with our device
+# Values should be equal to newest Sammy's stock release, or adapted to Omni
+# Currently they're stock, but we may want to change it in the future
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    BUILD_FINGERPRINT="samsung/m0xx/m0:4.3/JSS15J/I9300XXUGNA7:user/release-keys" \
+    #BUILD_FINGERPRINT="samsung/m0xx/m0:4.4.2/KVT49L/I9300OMNI:user/release-keys" \
+    PRIVATE_BUILD_DESC="m0xx-user 4.3 JSS15J I9300XXUGNA7 release-keys" \
+    #PRIVATE_BUILD_DESC="m0xx-user 4.4.2 KVT49L I9300OMNI release-keys" \
+    TARGET_DEVICE=m0 \
+    PRODUCT_DEVICE=m0 \
+    PRODUCT_NAME=m0xx
