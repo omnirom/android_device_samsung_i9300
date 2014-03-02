@@ -36,7 +36,7 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/tiny_hw.xml:system/etc/sound/i9300
+    $(LOCAL_PATH)/configs/tiny_hw.xml:system/etc/sound/m0
 
 # Camera
 PRODUCT_PACKAGES += \
