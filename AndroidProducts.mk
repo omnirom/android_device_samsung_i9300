@@ -15,5 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_i9300.mk \
     $(LOCAL_DIR)/omni_i9300.mk
