@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8b77b57d_f8d9db83",
+        "filename": "configs/tiny_hw.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1000117
+      },
+      "writtenOn": "2014-03-14T11:14:09Z",
+      "side": 1,
+      "message": "This might break speaker.",
+      "revId": "bf71ba50e1a594541b97ae750f11140c8cd1e797",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    }
+  ]
+}
