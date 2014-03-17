@@ -27,7 +27,7 @@
     <bool name="useCameraInterface">false</bool>
 
     <!-- Full path to the sysfs luminosity -->
-    <string name="flashDeviceLuminosity"></string>
+    <string name="flashDeviceLuminosity">/sys/class/camera/rear/rear_flash</string>
 
     <!-- Off setting -->
     <integer name="valueOff">0</integer>
@@ -35,7 +35,7 @@
     <integer name="valueOn">1</integer>
 
     <!-- Low setting -->
-    <integer name="valueLow">-1</integer>
+    <integer name="valueLow">3</integer>
     <!-- Middle setting -->
-    <integer name="valueHigh">-1</integer>
+    <integer name="valueHigh">5</integer>
 </resources>
