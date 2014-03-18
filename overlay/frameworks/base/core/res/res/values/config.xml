@@ -18,13 +18,16 @@
 -->
 
 <!-- These resources are around just to allow their values to be customized
-        for different hardware and product builds. -->
+     for different hardware and product builds.  Do not translate. -->
 <resources>
-    <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
-         autodetected from the Configuration. -->
-    <bool name="config_showNavigationBar">false</bool>
- 
-    <!-- An Array of "[Connection name],[ConnectivityManager.TYPE_xxxx],      [associated radio-type],[priority],[restoral-timer(ms)],[dependencyMet]  -->
+    <!-- XXXXX NOTE THE FOLLOWING RESOURCES USE THE WRONG NAMING CONVENTION.
+         Please don't copy them, copy anything else. -->
+
+    <!-- This string array should be overridden by the device to present a list of network
+         attributes.  This is used by the connectivity manager to decide which networks can coexist
+         based on the hardware -->
+    <!-- An Array of "[Connection name],[ConnectivityManager.TYPE_xxxx],
+         [associated radio-type],[priority],[restoral-timer(ms)],[dependencyMet]  -->
     <!-- the 5th element "resore-time" indicates the number of milliseconds to delay
          before automatically restore the default connection.  Set -1 if the connection
          does not require auto-restore. -->
@@ -40,8 +43,11 @@
         <item>"wifi_p2p,13,1,0,-1,true"</item>
     </string-array>
 
+    <!-- This string array should be overridden by the device to present a list of radio
+         attributes.  This is used by the connectivity manager to decide which networks can coexist
+         based on the hardware -->
     <!-- An Array of "[ConnectivityManager connectionType],
-         [# simultaneous connection types]"  -->
+                      [# simultaneous connection types]"  -->
     <string-array translatable="false" name="radioAttributes">
         <item>"1,1"</item>
         <item>"0,1"</item>
@@ -65,8 +71,26 @@
         <item>7</item>
     </integer-array>
 
+    <!-- If this is true, key chords can be used to take a screen record on the device. -->
+    <bool name="config_enableScreenrecordChord">false</bool>
+
     <!-- The default iface on which to monitor data use -->
     <string name="config_datause_iface">pdp0</string>
+
+    <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
+    <bool name="config_intrusiveNotificationLed">true</bool>
+
+    <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
+    <bool name="config_intrusiveBatteryLed">true</bool>
+
+    <!-- Does the battery LED support multiple colors? Used to decide if the user can change the colors -->
+    <bool name="config_multiColorBatteryLed">true</bool>
+
+    <!-- Default LED on time for notification LED in milliseconds. -->
+    <integer name="config_defaultNotificationLedOn">1000</integer>
+
+    <!-- Default LED off time for notification LED in milliseconds. -->
+    <integer name="config_defaultNotificationLedOff">9000</integer>
 
     <!-- Allow the menu hard key to be disabled in LockScreen on some devices -->
     <bool name="config_disableMenuKeyInLockScreen">true</bool>
@@ -80,28 +104,9 @@
              8 - Assistant (search)
             16 - App switch
          For example, a device with Home, Back and Menu keys would set this
-         config to 7. -->
+         config to 7.  -->
     <integer name="config_deviceHardwareKeys">7</integer>
 
-    <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
-    <bool name="config_intrusiveNotificationLed">true</bool>
-    
-    <!-- Is the notification LED intrusive? -->
-    <bool name="config_intrusiveBatteryLed">true</bool>
-    
-    <!-- Is the LED multicolor? -->
-    <bool name="config_multiColorBatteryLed">true</bool>
-
-    <!-- Default color for notification LED is white. -->
-    <color name="config_defaultNotificationColor">#ffffffff</color>
-
-    <!-- Default LED on time for notification LED in milliseconds. -->
-    <integer name="config_defaultNotificationLedOn">1000</integer>
-
-    <!-- Default LED off time for notification LED in milliseconds. -->
-    <integer name="config_defaultNotificationLedOff">9000</integer>
-    
-    <!-- If this is true, key chords can be used to take a screen record on the device. -->
-     <bool name="config_enableScreenrecordChord">false</bool>
-
+    <!-- Boolean to enable stk functionality on Samsung phones -->
+    <bool name="config_samsung_stk">true</bool>
 </resources>
