@@ -141,6 +141,7 @@ struct route_setting voicecall_default_disable[] = {
 
 struct route_setting default_input[] = {
     { .ctl_name = "Main Mic Switch", .intval = 1, },
+    { .ctl_name = "MainMicBias Mode", .intval = 1, },
     { .ctl_name = "IN1L Volume", .intval = 28, },
     { .ctl_name = "MIXINL IN1L Switch", .intval = 1, },
     { .ctl_name = "MIXINL IN1L Volume", .intval = 0, },
