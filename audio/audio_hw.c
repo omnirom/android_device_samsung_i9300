@@ -598,6 +598,7 @@ static void select_mode(struct m0_audio_device *adev)
             adev->in_call = 0;
             ril_set_call_clock_sync(&adev->ril, SOUND_CLOCK_STOP);
             end_call(adev);
+            adev->in_device = AUDIO_DEVICE_NONE;
             force_all_standby(adev);
             select_output_device(adev);
             select_input_device(adev);
@@ -722,7 +723,9 @@ static void select_output_device(struct m0_audio_device *adev)
 
 static void select_input_device(struct m0_audio_device *adev)
 {
-    switch(adev->in_device) {
+    int input_device = AUDIO_DEVICE_BIT_IN | adev->in_device;
+
+    switch(input_device) {
         case AUDIO_DEVICE_IN_BUILTIN_MIC:
             ALOGD("%s: AUDIO_DEVICE_IN_BUILTIN_MIC", __func__);
             break;
