@@ -18,13 +18,18 @@
 -->
 
 <!-- These resources are around just to allow their values to be customized
-        for different hardware and product builds. -->
+     for different hardware and product builds. -->
 <resources>
+
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
          autodetected from the Configuration. -->
     <bool name="config_showNavigationBar">false</bool>
- 
-    <!-- An Array of "[Connection name],[ConnectivityManager.TYPE_xxxx],      [associated radio-type],[priority],[restoral-timer(ms)],[dependencyMet]  -->
+
+    <!-- XXXXX NOTE THE FOLLOWING RESOURCES USE THE WRONG NAMING CONVENTION.
+         Please don't copy them, copy anything else. -->
+
+    <!-- An Array of "[Connection name],[ConnectivityManager.TYPE_xxxx],
+         [associated radio-type],[priority],[restoral-timer(ms)],[dependencyMet]  -->
     <!-- the 5th element "resore-time" indicates the number of milliseconds to delay
          before automatically restore the default connection.  Set -1 if the connection
          does not require auto-restore. -->
