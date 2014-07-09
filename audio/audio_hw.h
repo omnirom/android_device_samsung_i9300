@@ -118,6 +118,8 @@ struct route_setting
 };
 
 struct route_setting voicecall_default[] = {
+    { .ctl_name = "AIF1ADC1 HPF Mode", .intval = 1 },
+    { .ctl_name = "AIF1ADC1 HPF Switch", .intval = 1 },
     { .ctl_name = "AIF2 Mode", .intval = 0, },
     { .ctl_name = "DAC1L Mixer AIF1.1 Switch", .intval = 1, },
     { .ctl_name = "DAC1R Mixer AIF1.1 Switch", .intval = 1, },
@@ -128,6 +130,8 @@ struct route_setting voicecall_default[] = {
 };
 
 struct route_setting voicecall_default_disable[] = {
+    { .ctl_name = "AIF1ADC1 HPF Mode", .intval = 0 },
+    { .ctl_name = "AIF1ADC1 HPF Switch", .intval = 0 },
     { .ctl_name = "AIF2 Mode", .intval = 0, },
     { .ctl_name = "DAC1L Mixer AIF2 Switch", .intval = 0, },
     { .ctl_name = "DAC1R Mixer AIF2 Switch", .intval = 0, },
@@ -178,7 +182,7 @@ struct route_setting headset_input[] = {
     { .ctl_name = "MIXINL IN1L Switch", .intval = 0, },
     { .ctl_name = "MIXINR IN1R Switch", .intval = 0, },
     { .ctl_name = "Headset Mic Switch", .intval = 1, },
-    { .ctl_name = "IN2L Volume", .intval = 18, },
+    { .ctl_name = "IN2L Volume", .intval = 28, },
     { .ctl_name = "MIXINL IN2L Switch", .intval = 1, },
     { .ctl_name = "MIXINL IN2L Volume", .intval = 0, },
     { .ctl_name = "AIF1ADC1 HPF Mode", .intval = 1, },
