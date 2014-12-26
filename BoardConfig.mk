@@ -56,6 +56,8 @@ TARGET_OTA_ASSERT_DEVICE := m0,i9300,GT-I9300
 
 # TWRP
 DEVICE_RESOLUTION := 720x1280
+#Use default graphics.c overriding the variable in BoardCommonConfig of smdk4412-common
+BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/i9300/recovery/graphics.c
 
 # Camera wrapper
 COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
