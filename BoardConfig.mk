@@ -22,7 +22,7 @@
 # RIL
 BOARD_PROVIDES_LIBRIL := true
 BOARD_MODEM_TYPE := xmm6262
-TARGET_SPECIFIC_HEADER_PATH := device/samsung/i9300/include
+BOARD_RIL_CLASS := ../../../device/samsung/i9300/ril
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/i9300/bluetooth
@@ -53,6 +53,9 @@ RECOVERY_FSTAB_VERSION := 2
 
 # assert
 TARGET_OTA_ASSERT_DEVICE := m0,i9300,GT-I9300
+
+# Device specific header overrides
+TARGET_SPECIFIC_HEADER_PATH := device/samsung/i9300/include
 
 # TWRP
 DEVICE_RESOLUTION := 720x1280
