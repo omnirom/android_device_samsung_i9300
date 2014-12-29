@@ -54,3 +54,7 @@ service dmb /system/bin/dmbserver
 
 #on property:ro.tvout.enable=false
 #    stop TvoutService_C
+
+# LMK
+on property:init.svc.bootanim=stopped
+    write /sys/module/lowmemorykiller/parameters/minfree 12288,15360,18432,21504,24576,30720
