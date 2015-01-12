@@ -20,6 +20,7 @@
 #include <stdint.h>
 #include <fcntl.h>
 #include <errno.h>
+#include <math.h>
 #include <sys/types.h>
 #include <linux/ioctl.h>
 #include <linux/input.h>
@@ -171,9 +172,44 @@ int cm36651_light_set_delay(struct exynos_sensors_handlers *handlers, long int d
 	return 0;
 }
 
-float cm36651_light_convert(int red, int green, int blue, int white)
+float cm36651_light_convert(unsigned int white, unsigned int green)
 {
-	return (float) white * 1.7f - 0.5f;
+	float gwrel = 1.0f;
+	float aux;
+	float r1, r2, r3, r4;
+
+	if (green <= 4)
+		return 0.0f;
+	else {
+		if (white > 0)
+			gwrel = (float) green / (float) white;
+
+		ALOGD("gwrel/fwhite=%f", gwrel);
+
+		r1 = floorf( (float) (pow((double) green, 1.3341) * 0.0258) );
+
+		aux = floorf( ((float) green * 0.18f * 9.44f) / gwrel);
+		r2 = aux;
+		r3 = aux * 0.77f;
+
+		r4 = floorf( (float) green * ( (gwrel * 1.546) - 0.46) );
+
+		ALOGD("r1 = %f", r1);
+		ALOGD("r2 = %f", r2);
+		ALOGD("r3 = %f", r3);
+		ALOGD("r4 = %f", r4);
+
+		if (gwrel <= 0.5f) {
+			return r1;
+		} else if (gwrel >= 0.9f) {
+			if (white <= 5999)
+				return r2;
+			else
+				return r3;
+		} else {
+			return r4;
+		}
+	}
 }
 
 int cm36651_light_get_data(struct exynos_sensors_handlers *handlers,
@@ -220,7 +256,7 @@ int cm36651_light_get_data(struct exynos_sensors_handlers *handlers,
 		}
 	} while (input_event.type != EV_SYN);
 
-	event->distance = cm36651_light_convert(red, green, blue, white);
+	event->light = cm36651_light_convert((unsigned int) white, (unsigned int) green);
 
 	return 0;
 }
