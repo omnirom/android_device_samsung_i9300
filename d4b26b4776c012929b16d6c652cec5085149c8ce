@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6b22818b_b4f04efd",
+        "filename": "rootdir/init.target.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1000317
+      },
+      "writtenOn": "2015-02-12T21:01:18Z",
+      "side": 1,
+      "message": "whitespace error",
+      "revId": "d4b26b4776c012929b16d6c652cec5085149c8ce",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    }
+  ]
+}
