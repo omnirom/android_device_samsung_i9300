@@ -3,24 +3,24 @@
     "remote": "omnirom",
     "repository": "android_kernel_samsung_smdk4412",
     "target_path": "kernel/samsung/smdk4412",
-    "revision": "android-5.0"
+    "revision": "android-5.1"
   },
   {
     "remote": "omnirom",
     "repository": "android_hardware_samsung",
     "target_path": "hardware/samsung",
-    "revision": "android-5.0"
+    "revision": "android-5.1"
   },
   {
     "remote": "omnirom",
     "repository": "android_device_samsung_smdk4412-common",
     "target_path": "device/samsung/smdk4412-common",
-    "revision": "android-5.0"
+    "revision": "android-5.1"
   },
   {
     "remote": "omnirom",
     "repository": "android_packages_apps_SamsungServiceMode",
     "target_path": "packages/apps/SamsungServiceMode",
-    "revision": "android-5.0"
+    "revision": "android-5.1"
   }
 ]
