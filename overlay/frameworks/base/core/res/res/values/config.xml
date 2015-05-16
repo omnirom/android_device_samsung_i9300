@@ -72,7 +72,7 @@
     </integer-array>
 
     <!-- If this is true, key chords can be used to take a screen record on the device. -->
-    <!-- <bool name="config_enableScreenrecordChord">false</bool> -->
+    <bool name="config_enableScreenrecordChord">false</bool>
 
     <!-- The default iface on which to monitor data use -->
     <string name="config_datause_iface">pdp0</string>
