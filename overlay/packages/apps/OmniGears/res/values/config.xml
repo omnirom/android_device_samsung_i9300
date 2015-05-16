@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2013 The OmniROM Project
 
      This program is free software: you can redistribute it and/or modify
@@ -15,13 +16,6 @@
 -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Volume Rocker Wake Support. Some devices do not support (PMU) this.
-         Setting to false will disable Volume Rocker Wake support -->
-    <bool name="config_show_volumeRockerWake">true</bool>
-
-    <!-- Whether device has hardware buttons -->
-    <bool name="config_has_hardware_buttons">true</bool>
-
     <!-- Home button Wake Support. Some devices do not support this.
          Setting to false will disable Home button Wake support -->
     <bool name="config_show_homeWake">true</bool>
