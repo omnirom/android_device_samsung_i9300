@@ -41,9 +41,6 @@ struct sensor_t smdk4x12_sensors[] = {
 	{ "AKM8975 Magnetic Sensor", "Asahi Kasei Microdevices", 1, SENSOR_TYPE_MAGNETIC_FIELD,
 		SENSOR_TYPE_MAGNETIC_FIELD, 2000.0f, 1.0f / 16, 6.8f, 10000, 0, 0, 0, 0, 0,
         SENSOR_FLAG_CONTINUOUS_MODE, {0}, },
-	{ "Orientation Sensor", "SMDK4x12 Sensors", 1, SENSOR_TYPE_ORIENTATION,
-		SENSOR_TYPE_ORIENTATION, 360.0f, 0.1f, 0.0f, 10000, 0, 0, 0, 0, 0,
-        SENSOR_FLAG_CONTINUOUS_MODE, {0}, },
 	{ "CM36651 Light Sensor", "Capella Microsystems", 1, SENSOR_TYPE_LIGHT,
 		SENSOR_TYPE_LIGHT, 121240.0f, 1.0f, 0.2f, 0, 0, 0, 0, 0, 0,
         SENSOR_FLAG_CONTINUOUS_MODE, {0}, },
@@ -63,7 +60,6 @@ int smdk4x12_sensors_count = sizeof(smdk4x12_sensors) / sizeof(struct sensor_t);
 struct smdk4x12_sensors_handlers *smdk4x12_sensors_handlers[] = {
 	&lsm330dlc_acceleration,
 	&akm8975,
-	&orientation,
 	&cm36651_proximity,
 	&cm36651_light,
 	&lsm330dlc_gyroscope,
