@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "18e79d95_57036e12",
+        "filename": "libsensors/input.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 235,
+      "author": {
+        "id": 1000280
+      },
+      "writtenOn": "2015-06-15T16:55:29Z",
+      "side": 1,
+      "message": "strtoll will be more appropriate.",
+      "revId": "798914e0fca979613a7439cf39124d611d22881c",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    }
+  ]
+}
