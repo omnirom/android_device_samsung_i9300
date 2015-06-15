@@ -116,7 +116,7 @@ int cm36651_light_activate(struct smdk4x12_sensors_handlers *handlers)
 
 	data = (struct cm36651_light_data *) handlers->data;
 
-	rc = sysfs_value_write(data->path_enable, 1);
+	rc = sysfs_value_write(data->path_enable, (int64_t) 1);
 	if (rc < 0) {
 		ALOGE("%s: Unable to write sysfs value", __func__);
 		return -1;
@@ -139,7 +139,7 @@ int cm36651_light_deactivate(struct smdk4x12_sensors_handlers *handlers)
 
 	data = (struct cm36651_light_data *) handlers->data;
 
-	rc = sysfs_value_write(data->path_enable, 0);
+	rc = sysfs_value_write(data->path_enable, (int64_t) 0);
 	if (rc < 0) {
 		ALOGE("%s: Unable to write sysfs value", __func__);
 		return -1;
