@@ -1,1 +1,4 @@
-allow system_app sysfs_display:file { getattr open read write };
+allow system_app devicesetting_sysfs_file:file { getattr open read write };
+
+# required for performancecontrol sh-commands
+allow system_app system_app_data_file:file { execute execute_no_trans };
