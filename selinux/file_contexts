@@ -10,8 +10,10 @@
 /dev/umts_ramdump0                      u:object_r:radio_device:s0
 /dev/umts_rfs0                          u:object_r:radio_device:s0
 
-/dev/block/mmcblk0p7                    u:object_r:efs_block_device:s0
+/dev/block/mmcblk0p7                    u:object_r:modem_block_device:s0
 /efs                                    u:object_r:efs_device_file:s0
+
+/data/misc/radio(/.*)?                  u:object_r:radio_system_data_file:s0
 
 # Camera
 /data/ISP_CV                            u:object_r:camera_data_file:s0
@@ -20,11 +22,21 @@
 
 # Bluetooth
 /dev/ttySAC0                            u:object_r:hci_attach_dev:s0
-/efs/bluetooth/bt_addr                  u:object_r:bluetooth_efs_file:s0
+/efs/bluetooth(/.*)?                    u:object_r:bluetooth_efs_file:s0
 
-# Display
-/sys/class/mdnie/mdnie/scenario         u:object_r:sysfs_display:s0
-/sys/class/mdnie/mdnie/mode             u:object_r:sysfs_display:s0
+# DeviceSettings
+/sys/class/lcd/panel/power_reduce             u:object_r:devicesetting_sysfs_file:s0
+/sys/class/mdnie/mdnie/scenario               u:object_r:devicesetting_sysfs_file:s0
+/sys/class/mdnie/mdnie/mode                   u:object_r:devicesetting_sysfs_file:s0
+/sys/class/mdnie/mdnie/negative               u:object_r:devicesetting_sysfs_file:s0
+/sys/class/sec/led/led_fade                   u:object_r:devicesetting_sysfs_file:s0
+/sys/class/timed_output/vibrator/pwm_value    u:object_r:devicesetting_sysfs_file:s0
+/sys/class/sec/sec_touchkey/brightness        u:object_r:devicesetting_sysfs_file:s0
+/sys/class/sec/sec_touchkey/force_disable     u:object_r:devicesetting_sysfs_file:s0
+/sys/class/sec/sec_touchkey/timeout           u:object_r:devicesetting_sysfs_file:s0
+/sys/devices/virtual/misc/touchwake/enabled   u:object_r:devicesetting_sysfs_file:s0
+/sys/devices/virtual/misc/touchwake/delay     u:object_r:devicesetting_sysfs_file:s0
+/sys/class/sec/sec_epen/epen_saving_mode      u:object_r:devicesetting_sysfs_file:s0
 
 # GPS
 /dev/ttySAC1                            u:object_r:gps_device:s0

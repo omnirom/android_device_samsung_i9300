@@ -1,5 +1,6 @@
 type mali_device, dev_type, mlstrustedobject;
 type rfkill_device, dev_type;
 type efs_block_device, dev_type;
+type modem_block_device, dev_type;
 type hpd_device, dev_type;
 type mfc_device, dev_type;
