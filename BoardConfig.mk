@@ -68,6 +68,7 @@ TARGET_OTA_ASSERT_DEVICE := m0,i9300,GT-I9300
 TARGET_SPECIFIC_HEADER_PATH := device/samsung/i9300/include
 
 # TWRP
+TW_THEME := portrait_hdpi
 DEVICE_RESOLUTION := 720x1280
 
 # Camera wrapper
